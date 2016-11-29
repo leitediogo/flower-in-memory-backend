@@ -1,0 +1,28 @@
+{
+  "name": "Decision",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "index": true
+    },
+    "id": {
+      "type": "number",
+      "id": true,
+      "index": true
+    },
+    "definition": {
+      "type": "any"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

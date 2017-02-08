@@ -1,7 +1,8 @@
 @echo off
-echo Batch script for running Backend
-cd /d C:\Projects\flower-in-memory-backend
+echo Batch script for updating and running Backend
 echo on
-git pull
-call npm install
+cd..
+FOR /F "tokens=* USEBACKQ" %%F IN (`git pull`) DO (SET a=%%F)
+set "b=Already up-to-date."
+if not "%a%"=="%b%" call npm install
 call npm start
